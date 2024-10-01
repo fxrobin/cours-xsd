@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="http://xml.learn.com/games" 
+           xmlns:g="http://xml.learn.com/games"
+           elementFormDefault="qualified">
+
+  <xsd:simpleType name="TypeTitle">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z][A-Z0-9 ]{0,49}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="TypeGenre">
+    <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="Aventure" />
+        <xsd:enumeration value="RPG" />
+        <xsd:enumeration value="Plateforme" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="TypeYear">
+    <xsd:restriction base="xsd:gYear">
+      <xsd:minInclusive value="1980"/>
+      <xsd:maxInclusive value="2000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="TypePlateform">
+    <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="NES" />
+        <xsd:enumeration value="PLAYSTATION" />
+        <xsd:enumeration value="SEGA" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="TypePrice">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0.01"/>
+      <xsd:maxInclusive value="999.99"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:element name="games">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="game" minOccurs="1" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="title" type="g:TypeTitle" />
+              <xsd:element name="genre" type="g:TypeGenre"/>
+              <xsd:element name="releaseYear" type="g:TypeYear"/>
+              <xsd:element name="platform" type="g:TypePlateform"/>
+              <xsd:element name="price" type="g:TypePrice"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

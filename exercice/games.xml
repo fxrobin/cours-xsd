@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<games xmlns="http://xml.learn.com/games">
+    <game>
+        <title>LEGEND OF ZELDA</title>
+        <genre>Aventure</genre>
+        <releaseYear>1986</releaseYear>
+        <platform>NES</platform>
+        <price>59.99</price>
+    </game>
+
+    <game>
+        <title>SUPER MARIO BROS</title>
+        <genre>Plateforme</genre>
+        <releaseYear>1985</releaseYear>
+        <platform>NES</platform>
+        <price>49.99</price>
+    </game>
+
+</games>
