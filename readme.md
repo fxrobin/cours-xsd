@@ -30,3 +30,12 @@ total 8
 -rw-r--r-- 1 robin robin  472 Oct  1 15:44 games.xml
 -rw-r--r-- 1 robin robin 1989 Oct  1 15:27 games.xsd
 ```
+
+La commande linux `xmllint` permet de valider un fichier XML par rapport à un schéma XSD.
+
+> **Prérequis**: Il faut avoir installé le paquet `libxml2-utils` pour disposer de la commande `xmllint` :
+> `$ sudo apt-get install libxml2-utils`
+
+```bash
+$ xmllint --noout --schema exercice/games.xsd exercice/games.xml
+```
