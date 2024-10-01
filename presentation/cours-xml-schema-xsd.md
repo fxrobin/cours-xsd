@@ -347,11 +347,7 @@ Exemple de fichier XML (attention l'espace de nommage n'est pas encore défini, 
 
 Utiliser ce site : https://www.liquid-technologies.com/online-xsd-validator pour valider votre fichier XML.
 
-
-
 ---
 ## Conclusion
 
 Dans ce cours, nous avons vu les concepts de base de XML-Schema (XSD), notamment la structure des fichiers XSD, les types de données, les contraintes de validation, les énumérations, et les expressions régulières. Vous êtes maintenant prêts à utiliser ces notions pour valider des fichiers XML à l'aide de XSD.
-
-Accès au cours : [Introduction à XML-Schema (XSD)](https://hackmd.io/@I1LI1qnoQ4-EuYBUVTfdSA/SJDCQPKCR)
